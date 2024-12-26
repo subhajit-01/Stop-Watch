@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+
+        body {
+
+            background-color: rgba(17, 15, 15, 0.884);
+        }
+
+        .main {
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .display {
+            height: 70vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .hour,
+        .minute,
+        .second {
+            width: 200px;
+            height: 100px;
+            /* background-color: rgb(204, 179, 179); */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 100px;
+            opacity: 70%;
+        }
+
+        .Buttons {
+            width: 100vw;
+            height: calc(100vh-70vh);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+
+        }
+
+        .Buttons button {
+            all: unset;
+            font-size: 25px;
+            letter-spacing: 3px;
+            cursor: pointer;
+            opacity: 70%;
+            border: 1px solid black;
+            padding: 3px 10px;
+            transition: all .4s linear;
+        }
+
+        .Buttons button:hover {
+            opacity: 100%;
+            background-color: rgba(21, 18, 18, 0.884);
+        }
+
+        span {
+            margin-top: -13px;
+            font-size: 100px;
+        }
+
+        @media (max-width:768px) {
+            .display {
+                height: 50vh;
+                gap: 10px;
+            }
+
+            .hour,
+            .minute,
+            .second {
+                font-size: 60px;
+
+            }
+            .Buttons {
+            height: calc(100vh-50vh);
+           
+            gap: 30px;
+
+        }
+        
+        .Buttons button {
+           
+            font-size: 20px;
+           
+        }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="display">
+            <div class="hour">00</div><span>:</span>
+            <div class="minute">00</div><span>:</span>
+            <div class="second">00</div>
+        </div>
+
+
+        <div class="Buttons">
+            <button type="button" class="Start" onclick="clock()">Start </button>
+            <button type="button" class="Stop" onclick="stop()">Stop </button>
+            <button type="button" class="Reset" onclick="reset()">Reset</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
